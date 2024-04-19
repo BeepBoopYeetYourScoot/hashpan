@@ -1,0 +1,20 @@
+{% load static %}
+<h3 align="center"> Определение блэклиста по хэшпену</h3>
+
+<form action="{% url 'hashpan_view' %}" method="post" >
+    {% csrf_token %}
+
+    <div class="form-group">
+        <label for="first_six_letters"> Первые 6 цифр карты</label>
+        <input type="text" id="first_six_letters" name="first_six_letters">
+    </div>
+
+    <div class="form-group">
+        <label for="last_four_letters">Последние 4 цифры карты</label>
+        <input type="text" id="last_four_letters" name="last_four_letters">
+    </div>
+
+    <div class="form-group">
+        <button type="submit">Отправить</button>
+    </div>
+</form>

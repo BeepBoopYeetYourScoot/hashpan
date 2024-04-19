@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} {% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'form.css' %}">
+</head>
+<body>
+    <table>
+        <tr> {% include 'includes/card_hashpan_form.html' %}</tr>
+        <hr>
+        <tr> {% block orders %} {% endblock %} </tr>
+    </table>
+    {% if form.errors %}
+    <div class="alert alert-danger">
+        {{ form.errors }}
+    </div>
+    {% endif %}
+</body>
+</html>

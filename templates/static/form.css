@@ -1,0 +1,19 @@
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Optional: Align vertically */
+    flex-wrap: wrap;
+}
+.form-group {
+    margin: 0 10px; /* Add margin between form elements */
+    text-align: center;
+}
+.form-group label {
+    display: block;
+}
+.form-group input {
+    width: 200px; /* Adjust width as needed */
+}
+button[type="submit"] {
+    width: 120px; /* Adjust width as needed */
+}

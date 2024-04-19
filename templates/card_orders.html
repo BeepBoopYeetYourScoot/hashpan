@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+Поездки
+{% endblock title %}
+{% block orders %}
+<table class="data-table">
+    <thead>
+        <tr>
+            <th>num</th>
+            <th>order_num</th>
+            <th>oper_code</th>
+            <th>route</th>
+            <th>term_code</th>
+            <th>smena</th>
+            <th>ticket_number</th>
+            <th>card_mask</th>
+            <th>hashpan</th>
+            <th>amount</th>
+            <th>date_of</th>
+            <th>date_payment</th>
+            <th>state</th>
+<!--            <th>comment</th>-->
+            <th>approval</th>
+            <th>is_blocked</th>
+        </tr>
+    </thead>
+    {% for obj in payments %}
+    <tr>
+        <td>{{ obj.num }}</td>
+        <td>{{ obj.order_num }}</td>
+        <td>{{ obj.oper_code }}</td>
+        <td>{{ obj.route }}</td>
+        <td>{{ obj.term_code }}</td>
+        <td>{{ obj.smena }}</td>
+        <td>{{ obj.ticket_number }}</td>
+        <td>{{ obj.card_mask }}</td>
+        <td>{{ obj.hashpan }}</td>
+        <td>{{ obj.amount }}</td>
+        <td>{{ obj.date_of }}</td>
+        <td>{{ obj.date_payment }}</td>
+        <td>{{ obj.state }}</td>
+<!--        <td>{{ obj.comment }}</td>-->
+        <td>{{ obj.approval }}</td>
+        <td>{{ obj.is_blocked }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock orders %}
