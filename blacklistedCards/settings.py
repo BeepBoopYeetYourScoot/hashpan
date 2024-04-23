@@ -29,7 +29,7 @@ INSTALLED_APPS = [
     "hashpan_checker",
 ]
 
-STATIC_URL = "static/"
+STATIC_URL = "/static/"
 STATICFILES_DIRS = ("static",)
 STATIC_ROOT = ""
 
