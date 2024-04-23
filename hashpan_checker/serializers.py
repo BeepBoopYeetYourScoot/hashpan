@@ -3,7 +3,7 @@ from rest_framework import serializers
 
 class TransportOrderSerializer(serializers.Serializer):
     num = serializers.IntegerField()
-    order_num = serializers.CharField()
+    order_num = serializers.CharField(required=False, allow_blank=True, allow_null=True)
     oper_code = serializers.IntegerField()
     route = serializers.CharField()
     term_code = serializers.IntegerField()
@@ -14,6 +14,6 @@ class TransportOrderSerializer(serializers.Serializer):
     amount = serializers.FloatField()
     date_of = serializers.DateTimeField()
     date_payment = serializers.DateTimeField(required=False, allow_null=True)
-    state = serializers.CharField()
-    comment = serializers.CharField(required=False, allow_blank=True)
-    approval = serializers.CharField(required=False, allow_blank=True)
+    state = serializers.CharField(required=False, allow_blank=True, allow_null=True)
+    comment = serializers.CharField(required=False, allow_blank=True, allow_null=True)
+    approval = serializers.CharField(required=False, allow_blank=True, allow_null=True)
