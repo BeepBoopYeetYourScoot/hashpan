@@ -31,7 +31,7 @@ INSTALLED_APPS = [
 
 STATIC_URL = "/static/"
 STATICFILES_DIRS = ("static",)
-STATIC_ROOT = ""
+STATIC_ROOT = BASE_DIR / "staticfiles"
 
 
 MIDDLEWARE = [
