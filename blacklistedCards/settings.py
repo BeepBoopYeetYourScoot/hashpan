@@ -32,6 +32,7 @@ INSTALLED_APPS = [
 STATIC_URL = "static/"
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "templates", "static"),
+    os.path.join(BASE_DIR, "staticfiles"),
 ]
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
