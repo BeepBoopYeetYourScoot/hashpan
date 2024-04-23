@@ -7,5 +7,4 @@ from hashpan_checker.urls import urlpatterns as hashpan_urls
 
 urlpatterns = [path("admin/", admin.site.urls), path("", include(hashpan_urls))]
 
-if settings.DEBUG:
-    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
